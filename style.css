@@ -1,0 +1,434 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:sans-serif;
+}
+nav{
+    width:100vw;
+    height:5rem;
+    padding-bottom: .7rem;
+    position: fixed;
+    background-color:white;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 100;
+}
+.menu{
+    padding-left:5.5rem;
+    position:relative;
+    cursor: pointer;
+}
+.menu::before{
+    content:"";
+    position:absolute;
+    width:1.2rem;
+    height:.15rem;
+    right:2.9rem;
+    top:.25rem;
+    background-color: black;
+}
+.menu::after{
+    content:"";
+    position:absolute;
+    width:1.2rem;
+    height:.15rem;
+    right:2.9rem;
+    top:.7rem;
+    background-color: black;
+}
+.menu:hover{
+    color:rgb(9, 84, 38);
+}
+.menu:hover::before,.menu:hover::after{
+    background-color:rgb(9, 84, 38);
+}
+.logo{
+    width:9rem;
+    height:5rem;
+    margin-left:7rem;
+    background-image: url(https://www.thewatchcompany.com/media/tm_blog/p/o/7/6485/post_7_6485_t.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0.2rem .8rem;
+    cursor: pointer;
+}
+.search-selection{
+    width: 15rem;
+    display:flex;
+    justify-content: space-between;
+}
+.search-selection div:first-of-type{
+    position:relative;
+}
+.search-selection div:last-of-type{
+    padding-right:3rem;
+    position:relative;
+}
+.search-selection div:first-of-type::before{
+    content:"";
+    position:absolute;
+    left:-1.1rem;
+    top:.12rem;
+    padding:.4rem;
+    background-image: url(https://w7.pngwing.com/pngs/608/913/png-transparent-computer-icons-google-search-symbol-mobile-search-search-for-miscellaneous-logo-mobile-phones-thumbnail.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.search-selection div:last-of-type::before{
+    content:"";
+    position:absolute;
+    left:-1.1rem;
+    top:.09rem;
+    padding:.4rem;
+    background-image: url(https://w7.pngwing.com/pngs/799/396/png-transparent-heart-gold-heart-icon-thumbnail.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.search-selection div:first-of-type:hover,.search-selection div:last-of-type:hover{
+    color:rgb(9, 84, 38);
+    cursor: pointer;
+}
+.video-container{
+    width:100vw;
+    height:100vh;
+}
+.rolex-video{
+    position:relative;
+    padding-top:5rem;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.home-head-container{
+    width:100%;
+    position:relative;
+    top:-22rem;
+    text-align: center;
+    font-family:  Geneva, 'Lucida Sans Unicode', 'Lucida Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+}
+.home-head-container h1{
+    font-size: 2.5rem;
+    letter-spacing: .6rem;
+}
+.home-head-container h3{
+    padding:.5rem;
+    letter-spacing: .4rem;
+}
+.challenges{
+    display:flex;
+    justify-content: center;
+    padding-top:1rem;
+}
+.challenges a{
+    text-decoration: none;
+    color:white;
+    display:flex;
+    position:relative;
+    flex-direction: column;
+    align-items: center;
+}
+.challenges a div{
+    width:8rem;
+    aspect-ratio: 1;
+    overflow:hidden;
+    margin:1rem;
+    border-radius: 50%;
+}
+.challenges a div img{
+    width:100%;
+    height:100%;
+    transition:.6s ease-in-out;
+}
+.challenges a p{
+    padding-top:1.3rem;
+    width:8rem;
+}
+.challenges a::after{
+    content:"";
+    position:absolute;
+    top:.59rem;
+    left:.6rem;
+    width:8.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border:.15rem solid rgb(2, 94, 2);
+}
+
+.challenges a:hover img{
+    transform:scale(1.1);
+}
+
+
+.second-container{
+    width:100vw;
+    background-color: white;
+    padding: 1.5rem 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.second-container h1{
+    font-size: 3.7vw;
+    padding:2rem 9%;
+    letter-spacing: .2rem;
+    background-image: linear-gradient(90deg,black,rgb(5, 162, 241));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+}
+.second-container p{
+    padding:0 9%;
+    color:rgb(83, 82, 82);
+    line-height: 1.6rem;
+    letter-spacing: .04rem;
+}
+.more{
+    padding:3rem 9%;
+}
+.watch-finder{
+    float:left;
+    padding:.5rem 1rem;
+    color: rgb(28, 116, 72);
+    border-radius: 2rem;
+    border:.1rem solid rgb(28, 116, 72);
+}
+.watch-finder:hover{
+    color:white;
+    background-color: rgb(28, 116, 72);
+    cursor: pointer;
+}
+.more span{
+    width:12rem;
+    float:left;
+    padding:.5rem 1rem;
+    color: rgb(28, 116, 72);
+}
+.more span:hover{
+    color: rgb(156, 172, 164);
+    cursor: pointer;
+}
+.watches{
+    color:black;
+    margin-top:1.5rem;
+}
+.watches span{
+    color: rgb(28, 116, 72);
+    cursor: pointer;
+}
+.more-watches{
+    display:flex;
+    overflow-x: scroll;
+    gap:.5rem;
+    padding:2rem 9%;
+}
+.more-watches::-webkit-scrollbar{
+    display:none;
+}
+.more-watches a{
+    text-decoration: none;
+}
+.more-watches a div{
+    width:100%;
+    height:23rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+.more-watches a div img{
+    width:20rem;
+    transition:.6s ease-in-out;
+}
+.more-watches a h3{
+    padding-top:.6rem;
+    color:black;
+    font-size: 1rem;
+}
+.more-watches a p{
+    color:rgb(120, 117, 117);
+    padding: 0;
+    font-size: .85rem;
+}
+.more-watches a:hover img{
+    transform:scale(1.05);
+}
+
+
+.third-container-link{
+    text-decoration: none;
+    color:white;
+}
+.img-back{
+    width:100vw;
+    height:40rem;
+    overflow: hidden;
+}
+.img-container{
+    height:40rem;
+    background-image: url(https://content.rolex.com/dam/new-watches-2022/new-watches/deepsea-challenge/homepage/banner-push/homepage-new-rolex-deepsea-watchmaking-push_portrait.jpg);
+    background-blend-mode: color;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.58);
+    background-size: cover;
+    transition:.8s ease-in-out;
+}
+.container{
+    position:absolute;
+    top:116rem;
+}
+.container p{
+    width:12rem;
+    margin:12% 0 0 15%;
+}
+.container h1{
+    margin: 1.5rem 0 0 15%;
+    font-family:  Geneva, 'Lucida Sans Unicode', 'Lucida Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    width:26rem;
+    letter-spacing: .3rem;
+}
+.container div{
+    width:10rem;
+    text-align: center;
+    padding:.5rem;
+    border-radius: 2rem;
+    border:.1rem solid white;
+    margin: .5rem 0 0 15%;
+    transition:.3s ease-in-out;
+}
+.third-container-link:hover .img-container{
+    transform:scale(1.05);
+}
+.container div:hover{
+    background-color: white;
+    color: rgb(28, 116, 72);;
+}
+
+
+.fourth-container{
+    width:100vw;
+    background-color: white;
+    padding:10% 5%;
+}
+.third-head{
+    font-size: .9rem;
+    padding-bottom:2rem;
+}
+.fourth-img-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: .4rem;
+}
+.fourth-img-container a{
+    text-decoration: none;
+    color:black;
+}
+.fourth-img-container a div{
+    height:23rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.fourth-img-container a div img{
+    width:100%;
+    height:110%;
+    object-fit: cover;
+    transition:.5s ease-in-out;
+}
+.fourth-img-container a h3{
+    font-size: 2.2vw;
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: .1rem;
+    padding:.4rem 0;
+}
+.fourth-img-container a p{
+    color:rgb(125, 122, 122);
+    font-size: .9rem;;
+}
+.fourth-img-container a:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.fourth-img-container a:hover img{
+    transform:scale(1.05);
+}
+
+.share-page{
+    width:100vw;
+    padding:2.5rem;
+    background-color: rgb(232, 232, 232);
+}
+.share-page h3{
+    text-align: center;
+    padding:1rem;
+    font-size: .95rem;
+    font-family:  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.media-icons{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.media-icons a{
+    padding:.7rem;
+    background-size: cover;
+    border-radius: 50%;
+}
+.media-icons a:hover{
+    background-color: rgb(141, 233, 141);
+}
+
+
+
+footer{
+    padding:2rem;
+    background-color: rgb(41, 40, 40);
+    color:rgb(219, 217, 217);
+}
+.footer-head{
+    padding:2rem;
+    display:flex;
+    justify-content: space-between;
+}
+.footer-head p{
+    font-size: .85rem;
+}
+.footer-data{
+    display:flex;
+    justify-content: space-around;
+}
+.footer-data ul{
+    list-style: none;
+}
+.footer-data ul li{
+    padding:.3rem;
+    font-size: .8rem;
+}
+.footer-data ul li:hover{
+    color:rgb(174, 116, 6);
+    cursor: pointer;
+}
+.corporate-commit{
+    display:inline-block;
+    margin:3rem 8rem;
+    font-size: .85rem;
+}
+.corporate-commit:hover{
+    color:rgb(174, 116, 6);
+    cursor: pointer;
+}
+.footer-data ul li:first-child{
+    font-family: sans-serif;
+    font-size: .9rem;
+}
+.footer-data ul li:first-child:hover{
+    color:rgb(219, 217, 217);
+    cursor: text;
+}
+.footer-head p:hover{
+    color:rgb(174, 116, 6);
+    cursor: pointer;
+}
