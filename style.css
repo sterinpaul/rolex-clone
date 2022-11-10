@@ -3,6 +3,11 @@
     padding:0;
     box-sizing: border-box;
 }
+html{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+}
 body{
     font-family:sans-serif;
 }
@@ -17,96 +22,153 @@ nav{
     justify-content: space-between;
     z-index: 100;
 }
-.menu{
-    padding-left:5.5rem;
-    position:relative;
+
+.menu-container{
+    margin-left: 3rem;
     cursor: pointer;
 }
-.menu::before{
-    content:"";
-    position:absolute;
-    width:1.2rem;
-    height:.15rem;
-    right:2.9rem;
-    top:.25rem;
+.hamburger-container{
+    width:1.7rem;
+    aspect-ratio: 1;
+    box-shadow: 0 0 .3rem .05rem black;
+    border-radius: .2rem;
+    background-color: white;
+    display:flex;
+    position:relative;
+    top:1rem;
+    left:-1%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu{
+    display:block;
+    margin-left:2rem;
+}
+.hamburger-menu{
+    width:1rem;
+    height:.2rem;
     background-color: black;
 }
-.menu::after{
-    content:"";
-    position:absolute;
-    width:1.2rem;
-    height:.15rem;
-    right:2.9rem;
-    top:.7rem;
-    background-color: black;
-}
-.menu:hover{
+
+.menu-container:hover .menu{
     color:rgb(9, 84, 38);
 }
-.menu:hover::before,.menu:hover::after{
+.menu-container:hover .hamburger-menu{
     background-color:rgb(9, 84, 38);
 }
 .logo{
     width:9rem;
     height:5rem;
-    margin-left:7rem;
+    display:block;
+    margin-left:10vw;
     background-image: url(https://www.thewatchcompany.com/media/tm_blog/p/o/7/6485/post_7_6485_t.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: 0.2rem .8rem;
     cursor: pointer;
 }
 .search-selection{
-    width: 15rem;
     display:flex;
-    justify-content: space-between;
+    flex-direction: row;
+    margin-right:1%;
 }
-.search-selection div:first-of-type{
+.search{
+    display:flex;
+    align-items: flex-end;
+}
+.search div:first-of-type{
+    width:.8rem;
+    aspect-ratio: 1;
     position:relative;
-}
-.search-selection div:last-of-type{
-    padding-right:3rem;
-    position:relative;
-}
-.search-selection div:first-of-type::before{
-    content:"";
-    position:absolute;
-    left:-1.1rem;
-    top:.12rem;
-    padding:.4rem;
+    bottom:.15rem;
+    right:.2rem;
     background-image: url(https://w7.pngwing.com/pngs/608/913/png-transparent-computer-icons-google-search-symbol-mobile-search-search-for-miscellaneous-logo-mobile-phones-thumbnail.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
-.search-selection div:last-of-type::before{
-    content:"";
-    position:absolute;
-    left:-1.1rem;
-    top:.09rem;
-    padding:.4rem;
+.selection{
+    display:flex;
+    align-items: flex-end;
+}
+.selection div:first-of-type{
+    width:.8rem;
+    aspect-ratio: 1;
+    position:relative;
+    bottom:.15rem;
+    right:.2rem;
     background-image: url(https://w7.pngwing.com/pngs/799/396/png-transparent-heart-gold-heart-icon-thumbnail.png);
     background-repeat: no-repeat;
     background-size: contain;
+}
+.search div:last-of-type,.selection div:last-of-type{
+    margin-right:2rem;
 }
 .search-selection div:first-of-type:hover,.search-selection div:last-of-type:hover{
     color:rgb(9, 84, 38);
     cursor: pointer;
 }
+
+@media (max-width:44rem){
+    nav{
+        background-color:transparent;
+    }
+    .menu{
+        visibility: hidden;
+    }
+    .menu-container{
+        margin-left:.5rem;
+    }
+    .logo{
+        display:none;
+    }
+    .search-selection{
+        flex-direction: column;
+        gap:1rem;
+        display:none;
+    }
+    .search div:first-of-type,.selection div:first-of-type{
+        margin-right:1rem;
+    }
+    .home-head-container{
+        padding-top:40vh !important;
+    }
+    .challenges a div{
+        width:6rem !important;
+    }
+    .challenges a::after{
+        width:6.5rem !important;
+    }
+    .challenges a p{
+        font-size: .85rem;
+    }
+    .footer-data{
+        flex-direction: column;
+    }
+}
+
+/* Home Page */
+
 .video-container{
     width:100vw;
     height:100vh;
 }
-.rolex-video{
-    position:relative;
-    padding-top:5rem;
-    width:100%;
-    height:100%;
+#rolex-video{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100vw;
+    height:100vh;
+    max-height: fit-content;
     object-fit: cover;
+    z-index: -1;
 }
 .home-head-container{
-    width:100%;
     position:relative;
-    top:-22rem;
+    height:100vh;
+    padding-top:50vh;
     text-align: center;
     font-family:  Geneva, 'Lucida Sans Unicode', 'Lucida Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:white;
@@ -123,6 +185,7 @@ nav{
     display:flex;
     justify-content: center;
     padding-top:1rem;
+    overflow:scroll;
 }
 .challenges a{
     text-decoration: none;
@@ -141,7 +204,6 @@ nav{
 }
 .challenges a div img{
     width:100%;
-    height:100%;
     transition:.6s ease-in-out;
 }
 .challenges a p{
@@ -163,6 +225,7 @@ nav{
     transform:scale(1.1);
 }
 
+/* Second Section */
 
 .second-container{
     width:100vw;
@@ -173,7 +236,7 @@ nav{
     justify-content: flex-start;
 }
 .second-container h1{
-    font-size: 3.7vw;
+    font-size: 2rem;
     padding:2rem 9%;
     letter-spacing: .2rem;
     background-image: linear-gradient(90deg,black,rgb(5, 162, 241));
@@ -256,6 +319,7 @@ nav{
     transform:scale(1.05);
 }
 
+/* Third Section */
 
 .third-container-link{
     text-decoration: none;
@@ -276,8 +340,8 @@ nav{
     transition:.8s ease-in-out;
 }
 .container{
-    position:absolute;
-    top:116rem;
+    position:relative;
+    bottom:65vh;
 }
 .container p{
     width:12rem;
@@ -307,6 +371,7 @@ nav{
     color: rgb(28, 116, 72);;
 }
 
+/* Fourth Section */
 
 .fourth-container{
     width:100vw;
@@ -356,6 +421,9 @@ nav{
     transform:scale(1.05);
 }
 
+
+/* Social media */
+
 .share-page{
     width:100vw;
     padding:2.5rem;
@@ -381,7 +449,7 @@ nav{
     background-color: rgb(141, 233, 141);
 }
 
-
+/* Footer Section */
 
 footer{
     padding:2rem;
@@ -412,8 +480,8 @@ footer{
     cursor: pointer;
 }
 .corporate-commit{
-    display:inline-block;
-    margin:3rem 8rem;
+    /* display:inline-block; */
+    margin:3rem 5%;
     font-size: .85rem;
 }
 .corporate-commit:hover{
@@ -423,6 +491,7 @@ footer{
 .footer-data ul li:first-child{
     font-family: sans-serif;
     font-size: .9rem;
+    border-bottom:1px solid rgb(70, 69, 69);
 }
 .footer-data ul li:first-child:hover{
     color:rgb(219, 217, 217);
