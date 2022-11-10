@@ -9,17 +9,33 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <nav>
-        <div class="menu">Menu</div>
-        <div class="logo"></div>
-        <div class="search-selection">
-            <div>Search</div>
-            <div>Your selection</div>
+    <nav id="nav-bar">
+        <div class="menu-container">
+            <div class="hamburger-container" id="hamburger" onclick="hamburg()">
+                <div class="hamburger-menu"></div>
+                <div class="hamburger-menu"></div>
+            </div>
+            <div class="menu" id="menu">Menu</div>
+        </div>
+        <div class="logo" id="logo"></div>
+        <div class="search-selection" id="search-selection">
+            <div class="search">
+                <div></div>
+                <div>Search</div>
+            </div>
+            <div class="selection" id="selection">
+                <div></div>
+                <div>Your selection</div>
+            </div>
         </div>
     </nav>
+
+
+    <!-- Home Section -->
+
     <section>
         <div class="video-container">
-            <video autoplay muted loop class="rolex-video" source src="https://content.rolex.com/dam/new-watches-2022/new-watches/deepsea-challenge/homepage/hss/homepage-new-rolex-deepsea-cover.mp4"></video>
+            <video autoplay muted loop id="rolex-video" source src="https://content.rolex.com/dam/new-watches-2022/new-watches/deepsea-challenge/homepage/hss/homepage-new-rolex-deepsea-cover.mp4"></video>
             <div class="home-head-container">
                 <h1>DEEPSEA CHALLENGE</h1>
                 <H3>NEW ROLEX DIVER'S WATCH</H3>
@@ -40,6 +56,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Second section -->
     <section>
         <div class="second-container">
             <h1>ROLEX WATCHES ARE CRAFTED WITH SCRUPULOUS ATTENTION TO DETAIL.</h1>
@@ -88,9 +106,15 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Third Section -->
+
     <section>
         <a class="third-container-link" href="https://www.rolex.com/en-us/watches/new-watches/new-deepsea-challenge/the-ultimate-diver.html">
-            <div class="img-back"><div class="img-container"></div></div>
+            <div class="img-back">
+                <div class="img-container"></div>
+            </div>
             <div class="container">
                 <p>New Deepsea Challenge</p>
                 <h1>THE ULTIMATE DIVER</h1>
@@ -98,6 +122,10 @@
             </div>
         </a>
     </section>
+
+
+    <!-- Fourth Section -->
+
     <section>
         <div class="fourth-container">
             <p class="third-head">Discovering Rolex</p>
@@ -120,6 +148,10 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Social Media page -->
+
     <section>
         <div class="share-page">
             <h3>SHARE THIS PAGE</h3>
@@ -139,6 +171,10 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Footer -->
+    
     <footer>
         <div class="footer-head">
             <p>Languages</p>
@@ -176,5 +212,6 @@
         </div>
         <p class="corporate-commit">Our corporate commitments on Rolex.org</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
